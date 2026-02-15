@@ -15,6 +15,13 @@
       "when": 1771122579860,
       "tag": "0001_white_cyclops",
       "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "7",
+      "when": 1771184619026,
+      "tag": "0002_keen_abomination",
+      "breakpoints": true
     }
   ]
 }

@@ -1,13 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import {
-  ClipboardType,
-  Database,
-  Home,
-  Menu,
-  Network,
-  Table,
-  X,
-} from "lucide-react";
+import { Home, MapPinHouse, Menu, X } from "lucide-react";
 import { useState } from "react";
 
 export default function Header() {
@@ -66,10 +58,8 @@ export default function Header() {
             <span className="font-medium">Home</span>
           </Link>
 
-          {/* Demo Links Start */}
-
           <Link
-            to="/demo/table"
+            to="/locations"
             onClick={() => setIsOpen(false)}
             className="flex gap-3 items-center p-3 mb-2 rounded-lg transition-colors hover:bg-gray-800"
             activeProps={{
@@ -77,63 +67,9 @@ export default function Header() {
                 "flex items-center gap-3 p-3 rounded-lg bg-cyan-600 hover:bg-cyan-700 transition-colors mb-2",
             }}
           >
-            <Table size={20} />
-            <span className="font-medium">TanStack Table</span>
+            <MapPinHouse size={20} />
+            <span className="font-medium">Locations</span>
           </Link>
-
-          <Link
-            to="/demo/tanstack-query"
-            onClick={() => setIsOpen(false)}
-            className="flex gap-3 items-center p-3 mb-2 rounded-lg transition-colors hover:bg-gray-800"
-            activeProps={{
-              className:
-                "flex items-center gap-3 p-3 rounded-lg bg-cyan-600 hover:bg-cyan-700 transition-colors mb-2",
-            }}
-          >
-            <Network size={20} />
-            <span className="font-medium">TanStack Query</span>
-          </Link>
-
-          <Link
-            to="/demo/drizzle"
-            onClick={() => setIsOpen(false)}
-            className="flex gap-3 items-center p-3 mb-2 rounded-lg transition-colors hover:bg-gray-800"
-            activeProps={{
-              className:
-                "flex items-center gap-3 p-3 rounded-lg bg-cyan-600 hover:bg-cyan-700 transition-colors mb-2",
-            }}
-          >
-            <Database size={20} />
-            <span className="font-medium">Drizzle</span>
-          </Link>
-
-          <Link
-            to="/demo/form/simple"
-            onClick={() => setIsOpen(false)}
-            className="flex gap-3 items-center p-3 mb-2 rounded-lg transition-colors hover:bg-gray-800"
-            activeProps={{
-              className:
-                "flex items-center gap-3 p-3 rounded-lg bg-cyan-600 hover:bg-cyan-700 transition-colors mb-2",
-            }}
-          >
-            <ClipboardType size={20} />
-            <span className="font-medium">Simple Form</span>
-          </Link>
-
-          <Link
-            to="/demo/form/address"
-            onClick={() => setIsOpen(false)}
-            className="flex gap-3 items-center p-3 mb-2 rounded-lg transition-colors hover:bg-gray-800"
-            activeProps={{
-              className:
-                "flex items-center gap-3 p-3 rounded-lg bg-cyan-600 hover:bg-cyan-700 transition-colors mb-2",
-            }}
-          >
-            <ClipboardType size={20} />
-            <span className="font-medium">Address Form</span>
-          </Link>
-
-          {/* Demo Links End */}
         </nav>
       </aside>
     </>
